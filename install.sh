@@ -484,7 +484,7 @@
     
         location ~ ^/index\.php$ {
             fastcgi_split_path_info ^(.+\.php)(/.+)$;
-            fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+            fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
             fastcgi_index index.php;
             include fastcgi_params;
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
@@ -516,7 +516,7 @@
     		deny all;
   	  }
   		location ~ /phpmyadmin/(.+\.php)$ {
-    		fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+    		fastcgi_pass unix:/run/php/php7.2-fpm.sock;
     		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     		include fastcgi_params;
     		include snippets/fastcgi-php.conf;
@@ -527,7 +527,7 @@
 
     sudo ln -s /etc/nginx/sites-available/$server_name.conf /etc/nginx/sites-enabled/$server_name.conf
     sudo ln -s /var/web /var/www/$server_name/html
-    hide_output sudo systemctl reload php7.3-fpm.service
+    hide_output sudo systemctl reload php7.2-fpm.service
     hide_output sudo systemctl restart nginx.service
     echo -e "$GREEN Done...$COL_RESET"
     	
@@ -609,7 +609,7 @@
         
             location ~ ^/index\.php$ {
                 fastcgi_split_path_info ^(.+\.php)(/.+)$;
-                fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+                fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
                 fastcgi_index index.php;
                 include fastcgi_params;
                 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
@@ -640,7 +640,7 @@
     		deny all;
   	}
   		location ~ /phpmyadmin/(.+\.php)$ {
-    		fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+    		fastcgi_pass unix:/run/php/php7.2-fpm.sock;
     		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     		include fastcgi_params;
     		include snippets/fastcgi-php.conf;
@@ -651,7 +651,7 @@
     ' | sudo -E tee /etc/nginx/sites-available/$server_name.conf >/dev/null 2>&1
 	fi
 	
-	hide_output sudo systemctl reload php7.3-fpm.service
+	hide_output sudo systemctl reload php7.2-fpm.service
 	hide_output sudo systemctl restart nginx.service
 	echo -e "$GREEN Done...$COL_RESET"
 	
@@ -694,7 +694,7 @@
     
         location ~ ^/index\.php$ {
             fastcgi_split_path_info ^(.+\.php)(/.+)$;
-            fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+            fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
             fastcgi_index index.php;
             include fastcgi_params;
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
@@ -726,7 +726,7 @@
     		deny all;
   	}
   		location ~ /phpmyadmin/(.+\.php)$ {
-    		fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+    		fastcgi_pass unix:/run/php/php7.2-fpm.sock;
     		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     		include fastcgi_params;
     		include snippets/fastcgi-php.conf;
@@ -737,7 +737,7 @@
 
     sudo ln -s /etc/nginx/sites-available/$server_name.conf /etc/nginx/sites-enabled/$server_name.conf
     sudo ln -s /var/web /var/www/$server_name/html
-    hide_output sudo systemctl reload php7.3-fpm.service
+    hide_output sudo systemctl reload php7.2-fpm.service
     hide_output sudo systemctl restart nginx.service
     echo -e "$GREEN Done...$COL_RESET"
    
@@ -820,7 +820,7 @@
         
             location ~ ^/index\.php$ {
                 fastcgi_split_path_info ^(.+\.php)(/.+)$;
-                fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+                fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
                 fastcgi_index index.php;
                 include fastcgi_params;
                 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
@@ -851,7 +851,7 @@
     		deny all;
   	}
   		location ~ /phpmyadmin/(.+\.php)$ {
-    		fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+    		fastcgi_pass unix:/run/php/php7.2-fpm.sock;
     		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     		include fastcgi_params;
     		include snippets/fastcgi-php.conf;
@@ -864,7 +864,7 @@
 	echo -e "$GREEN Done...$COL_RESET"
 
     fi
-    hide_output sudo systemctl reload php7.3-fpm.service
+    hide_output sudo systemctl reload php7.2-fpm.service
     hide_output sudo systemctl restart nginx.service
     fi
     
