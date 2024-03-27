@@ -46,7 +46,7 @@
     echo
     echo -e "$GREEN************************************************************************$COL_RESET"
     echo -e "$GREEN Yiimp Install Script v0.2 $COL_RESET"
-    echo -e "$GREEN Install yiimp on Ubuntu 16.04/18.04 running Nginx, MariaDB, and php7.3 $COL_RESET"
+    echo -e "$GREEN Install yiimp on Ubuntu 16.04/18.04 running Nginx, MariaDB, and php7.2 $COL_RESET"
     echo -e "$GREEN************************************************************************$COL_RESET"
     echo
     sleep 3
@@ -157,7 +157,7 @@
     echo -e "$GREEN Done...$COL_RESET"
 
     
-    # Installing Installing php7.3
+    # Installing Installing php7.2
     echo
     echo
     echo -e "$CYAN => Installing php7.2 : $COL_RESET"
